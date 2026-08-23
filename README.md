@@ -39,6 +39,6 @@ Focuses on business intelligence, data modeling, and creating interactive visual
 
 If you have any questions about these projects or want to discuss data analytics, feel free to reach out!
 
-* **LinkedIn:** [(https://www.linkedin.com/in/kyla-hernandez07)]
+* **LinkedIn:** [https://www.linkedin.com/in/kyla-hernandez07](https://www.linkedin.com/in/kyla-hernandez07)
 * **Email:** [hernandez.kylacathrine@gmail.com]
 * **Portfolio/Website:** [https://kylahernandez-portfolio.vercel.app/]
