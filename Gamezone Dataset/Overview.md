@@ -31,5 +31,5 @@
 * **What I Learned:** I learned that data cleaning isn't a checklist to rush through — it's where most of the actual judgment in analytics happens: deciding what's a real error versus a legitimate business value, when to fix something yourself versus escalate to a stakeholder, and how to verify that a summary table's headline numbers actually match what the raw data supports before writing conclusions from it. That last habit — tracing a finding back to its source before presenting it — is the one I now treat as non-negotiable.
 
 ---
-**Author:** Kyla Cathrine Hernandez
+**Author:** Kyla Cathrine Hernandez  
 **Portfolio:** [https://kylahernandez-portfolio.vercel.app/](https://kylahernandez-portfolio.vercel.app/)
