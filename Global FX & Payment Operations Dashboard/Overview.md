@@ -13,7 +13,7 @@
 
 ##  Challenges & Solutions
 *   **Challenge:** I needed to show real-world financial losses, but I didn't have access to a real company's private payment data.
-*   **Solution:** I wrote a Python function that applied random hidden fees (1% to 4%) to live market exchange rates[. This accurately copied how real payment processors hide their fees.
+*   **Solution:** I wrote a Python function that applied random hidden fees (1% to 4%) to live market exchange rates. This accurately copied how real payment processors hide their fees.
 *   **Challenge:** Making sure the dashboard was a useful daily tool for a manager, not just a static picture.
 *   **Solution:** I added an interactive "Compliance Queue" filter. Managers can simply click "REVIEW: HIGH SPREAD" to instantly see exactly which transactions need their attention that day.
 
