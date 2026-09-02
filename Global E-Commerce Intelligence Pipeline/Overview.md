@@ -22,5 +22,5 @@
 *   **What I Learned:** I learned how to move beyond basic data cleaning to build robust, automated pipelines. I learned how to connect Python, SQL, and Power BI together into a single, continuous workflow that directly supports business decisions.
 
 ---
-**Author:** Kyla Cathrine Hernandez 
+**Author:** Kyla Cathrine Hernandez
 **Portfolio:** [https://kylahernandez-portfolio.vercel.app/](https://kylahernandez-portfolio.vercel.app/)
