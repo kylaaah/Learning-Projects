@@ -1,6 +1,8 @@
 # Learning-Projects
 A portfolio of introductory data analytics projects demonstrating practical, hands-on skills in Excel, SQL, and Power BI.
 
+* **Portfolio/Website:** [https://kylahernandez-portfolio.vercel.app/](https://kylahernandez-portfolio.vercel.app/)
+
 # Table of Contents
 * Project 1: [Global FX & Payment Operations Dashboard](https://github.com/kylaaah/Learning-Projects/blob/main/Global%20FX%20%26%20Payment%20Operations%20Dashboard/Overview.md) (**Tools:** Python, SQL, Power BI)
 * Project 2: [Global E-Commerce Intelligence Pipeline](https://github.com/kylaaah/Learning-Projects/blob/main/Global%20E-Commerce%20Intelligence%20Pipeline/Overview.md) (**Tools:** Python, SQL, Power BI)
@@ -46,4 +48,3 @@ If you have any questions about these projects or want to discuss data analytics
 
 * **LinkedIn:** [https://www.linkedin.com/in/kyla-hernandez07](https://www.linkedin.com/in/kyla-hernandez07)
 * **Email:** [hernandez.kylacathrine@gmail.com](hernandez.kylacathrine@gmail.com)
-* **Portfolio/Website:** [https://kylahernandez-portfolio.vercel.app/](https://kylahernandez-portfolio.vercel.app/)
