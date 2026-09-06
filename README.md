@@ -2,9 +2,9 @@
 A portfolio of introductory data analytics projects demonstrating practical, hands-on skills in Excel, SQL, and Power BI.
 
 #Table of Contents
-* Project 1: [Global FX & Payment Operations Dashboard](https://github.com/kylaaah/Learning-Projects/blob/main/Global%20FX%20%26%20Payment%20Operations%20Dashboard/Overview.md) (Python, SQL, Power BI)
-* Project 2: [Global E-Commerce Intelligence Pipeline](https://github.com/kylaaah/Learning-Projects/blob/main/Global%20E-Commerce%20Intelligence%20Pipeline/Overview.md) (Python, SQL, Power BI)
-* Project 3: [Gamezone Dataset](https://github.com/kylaaah/Learning-Projects/blob/main/Gamezone%20Dataset/Overview.md) (Tools: Excel, PivotTables)
+* Project 1: [Global FX & Payment Operations Dashboard](https://github.com/kylaaah/Learning-Projects/blob/main/Global%20FX%20%26%20Payment%20Operations%20Dashboard/Overview.md) (**Tools:** Python, SQL, Power BI)
+* Project 2: [Global E-Commerce Intelligence Pipeline](https://github.com/kylaaah/Learning-Projects/blob/main/Global%20E-Commerce%20Intelligence%20Pipeline/Overview.md) (**Tools:** Python, SQL, Power BI)
+* Project 3: [Gamezone Dataset](https://github.com/kylaaah/Learning-Projects/blob/main/Gamezone%20Dataset/Overview.md) (**Tools:** Excel, PivotTables)
 
 # Data Analytics Learning Portfolio 📊
 
