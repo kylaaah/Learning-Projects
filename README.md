@@ -7,6 +7,7 @@ A portfolio of introductory data analytics projects demonstrating practical, han
 * Project 1: [Global FX & Payment Operations Dashboard](https://github.com/kylaaah/Learning-Projects/blob/main/Global%20FX%20%26%20Payment%20Operations%20Dashboard/Overview.md) (Python, SQL, Power BI)
 * Project 2: [Global E-Commerce Intelligence Pipeline](https://github.com/kylaaah/Learning-Projects/blob/main/Global%20E-Commerce%20Intelligence%20Pipeline/Overview.md) (Python, SQL, Power BI)
 * Project 3: [Gamezone Dataset](https://github.com/kylaaah/Learning-Projects/blob/main/Gamezone%20Dataset/Overview.md) (Excel, PivotTables)
+* Project 4: [Rieane Salon Supply Sales & Inventory Analysis](https://github.com/kylaaah/Learning-Projects/blob/main/Rieane%20Salon%20Supply%20Sales%20%26%20Inventory%20Analysis/Overview.md) (Excel: SEARCH-based text normalization, TRIM, VLOOKUP, SUMIF/SUMIFS, INDEX/MATCH, SMALL, and FORECAST.)
 
 # Data Analytics Learning Portfolio 📊
 
