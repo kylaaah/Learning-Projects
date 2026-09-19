@@ -1,24 +1,36 @@
-# Salon Supply Sales Analysis — Overview
+# Salon Supply Sales Analysis — Data Cleaning & Forecasting
 
-## Project Overview & Scenario
+## Overview
 
-This project analyzes six years (2019–2026) of transaction data from a family-run salon supply business that sells haircare, nail care, PPE, and salon-essential products to parlors — through walk-in retail, salon delivery, and (in later years) an online channel. Since the business's real point-of-sale records aren't digitized yet, I built a synthetic dataset that mirrors exactly what a real data export would look like — mixed formats, entry errors, and all — to design and pressure-test a full cleaning-to-reporting pipeline *before* pointing it at the real thing.
+### Project Overview & Scenario
+Digitized point-of-sale records for the business weren't available yet, so a synthetic dataset was built using the business's actual product categories (tail combs, gloves, nail products, foundation, eyelash products, eyelash glue) to validate an analysis approach before applying it to the real records once they're digitized. The dataset covers 89,247 transaction rows across 52 products and 96 months (January 2019–December 2026), and was deliberately built messy — mixed date formats, inconsistent text casing, currency-formatted prices, negative quantities — to mirror what a real exported dataset actually looks like.
 
-## Tools & Technical Architecture
+The goal: turn that raw export into a trustworthy, analysis-ready workbook that could answer two real business questions — how did the pandemic affect sales, and which products need replacing — and build the reporting infrastructure (forecast, budget, dashboard) the business could keep using once real data comes in.
 
-Built entirely in Excel workbook: raw and cleaned transaction tables kept side by side for auditability, a `Lookup_Tables` sheet for unit standardization, a `Forecasting_Budgeting` tab (actual revenue, trailing 3-month budget, variance, linear-trend forecast), a `Product_Performance` tab benchmarking all 52 products against their own category peers, an `EDA` tab with four exploratory charts, a stakeholder-facing `Dashboard`, and an `Insights` tab documenting the issue log and findings. Core techniques: SEARCH-based text normalization, TRIM, VLOOKUP, SUMIF/SUMIFS, INDEX/MATCH, SMALL, and FORECAST.
+### Tools & Technical Architecture
+Built entirely in Google Sheets/Excel, using:
+- **SEARCH()** for case/spacing-insensitive text normalization (channel, customer type, category)
+- **TRIM()** to catch a whitespace bug that was silently breaking product lookups
+- **VLOOKUP** against a purpose-built reference table for unit normalization (44 raw variants → 30 canonical units) and to backfill missing 2026 prices from the current price list
+- **SUMIFS / COUNTIF / AVERAGEIF** for the monthly revenue rollups, transaction-count checks, and category-relative benchmarking
+- **FORECAST()** (linear regression) for the revenue forecast
+- Native Excel/Sheets charts (line, bar) for the EDA and Dashboard tabs
 
-## Challenges & Solutions
+Final workbook structure (10 tabs): raw and cleaned versions of the two source tables, a `Lookup_Tables` reference sheet, a `Forecasting_Budgeting` model, a `Product_Performance` analysis, an `EDA` tab, a `Dashboard`, and a documentation/issue-log tab.
 
-Nearly every column had its own break-fix story: four different raw date formats parsed by pattern; inconsistent category/channel text normalized with SEARCH; 439 negative quantities corrected with `ABS()` instead of dropped; 2,346 rows where Line Total didn't actually equal Price × Quantity, recomputed from cleaned values (a net +₱1,034,355 correction); and 44 raw unit variants collapsed into ~30 real units via a dedicated lookup table.
+### Challenges & Solutions
+- **Four different date formats mixed in one column** (DD-MM-YYYY, MM/DD/YYYY, YYYY/MM/DD, "Mon DD, YYYY") — solved by detecting each pattern and parsing it with its correct rule, rather than one blanket conversion.
+- **A stale Year column** that wasn't actually derived from the Date column, producing phantom years (2018, 2027) outside the dataset's real range — rebuilt as a live formula off the corrected date.
+- **Exact-string text matching silently failing on real-world variants** — `'WALK-IN STORE'`, `' Online'`, `'on-line'` weren't catching under simple equality checks. Rebuilt with normalized SEARCH()-based matching, which cut "Unknown" categorizations down to only genuinely blank source cells.
+- **A raw "Line Total" column that looked reliable but wasn't** — recomputing it from cleaned Price × Quantity uncovered 2,346 rows where the original figure simply didn't match the math, independent of any formatting issue. Net correction: +₱1.03M.
+- **A whitespace bug that broke ~30 products' price lookups** — stray leading/trailing spaces in Product IDs (`' SKU-011 '` vs `'SKU-011'`) were silently failing VLOOKUP matches against the price list. Fixed with TRIM(), which then made it possible to correctly backfill 66 blank 2026 prices.
+- **A product-performance metric that was technically correct but practically useless on the first pass** — comparing every product to its 2019 (pre-pandemic) peak flagged 42 of 52 products as "declining," because the *entire business* never recovered to 2019 levels. Redesigned to compare each product's recent trend against its own category's average instead, which correctly isolated 3 products declining for their own reasons rather than the shared macro shock.
+- **A forecast that was ~100x too high** — tracing it back, the model was fitting a straight line across all 96 months, letting the old pre-pandemic peak drag the projection way up. Digging further into *why* the most recent months looked like a business collapse (revenue near-zero) revealed the real cause: those months had only 1–4 recorded transactions versus a normal ~600/month — a data-completeness gap, not a real decline. The forecast was rebuilt to exclude those incomplete months from its basis.
 
-The hardest problem, though, wasn't a formatting bug — it was the forecast. A first-pass model projected ~₱330K for Q1 2027 while the last four months of actuals looked near zero. Checking transaction *volume* behind those numbers (rather than trusting revenue alone) revealed the real cause: those months had only 1–4 recorded transactions each, versus a normal 500–700 — a data-completeness gap, not a business collapse. Rebuilding the forecast to exclude the incomplete months brought it back in line with reality (₱389K–396K).
+### Impact & What I Learned
+The cleaning work corrected a net +₱1.03M in misstated revenue and made 66 previously-blank 2026 prices usable. The forecast and product-performance analysis are both now built on a verified, error-checked foundation rather than numbers that merely looked plausible.
 
-## Impact & What I Learned
-
-The corrected analysis surfaced three actionable findings: three of 52 products declining meaningfully faster than their category peers and worth discontinuing or repositioning; a lasting shift toward online sales (1.6% of revenue in 2019 to ~16–18% by 2026, well above the pre-pandemic baseline); and a forecast that's now trustworthy enough to actually plan around.
-
-The bigger lesson was about judgment, not formulas: a plausible, technically-correct number isn't automatically a meaningful one, and the habit that catches the difference is checking the data *behind* a metric before trusting it. I also learned to design for two different audiences — an EDA tab for my own working analysis, and a separate Dashboard for someone with 30 seconds — rather than assuming one chart set can serve both.
+The bigger lesson: a metric or a chart that runs without errors isn't the same as a metric that's *right*. Several of the real findings in this project only surfaced because I went back and checked a "working" result against a second source of truth — checking transaction counts, not just revenue, is what caught the forecast bug; checking the category-level baseline, not just the product's own history, is what caught the flawed first-pass underperformance metric. That habit — verify before you trust a clean-looking output — was the actual skill this project built.
 
 ---
 **Author:** Kyla Cathrine Hernandez  
