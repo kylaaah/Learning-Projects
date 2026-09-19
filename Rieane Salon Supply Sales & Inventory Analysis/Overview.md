@@ -19,3 +19,6 @@ The hardest problem, though, wasn't a formatting bug — it was the forecast. A 
 The corrected analysis surfaced three actionable findings: three of 52 products declining meaningfully faster than their category peers and worth discontinuing or repositioning; a lasting shift toward online sales (1.6% of revenue in 2019 to ~16–18% by 2026, well above the pre-pandemic baseline); and a forecast that's now trustworthy enough to actually plan around.
 
 The bigger lesson was about judgment, not formulas: a plausible, technically-correct number isn't automatically a meaningful one, and the habit that catches the difference is checking the data *behind* a metric before trusting it. I also learned to design for two different audiences — an EDA tab for my own working analysis, and a separate Dashboard for someone with 30 seconds — rather than assuming one chart set can serve both.
+---
+**Author:** Kyla Cathrine Hernandez  
+**Portfolio:** [https://kylahernandez-portfolio.vercel.app/](https://kylahernandez-portfolio.vercel.app/)
