@@ -1,4 +1,4 @@
-# Global E-Commerce Intelligence Pipeline
+# Global E-Commerce Intelligence Pipeline - Overview
 
 ## 📖 Project Overview & Scenario
 **The Problem:** A global retail enterprise (Superstore) was struggling to track their sales and identify why they were losing money. Their raw data was messy, inconsistent, and scattered across more than 51,000 international transactions.
