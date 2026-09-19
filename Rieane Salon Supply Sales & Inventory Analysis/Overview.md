@@ -6,7 +6,7 @@ This project analyzes six years (2019–2026) of transaction data from a family-
 
 ## Tools & Technical Architecture
 
-Built entirely in Excel as a 12-tab workbook: raw and cleaned transaction tables kept side by side for auditability, a `Lookup_Tables` sheet for unit standardization, a `Forecasting_Budgeting` tab (actual revenue, trailing 3-month budget, variance, linear-trend forecast), a `Product_Performance` tab benchmarking all 52 products against their own category peers, an `EDA` tab with four exploratory charts, a stakeholder-facing `Dashboard`, and an `Insights` tab documenting the issue log and findings. Core techniques: SEARCH-based text normalization, TRIM, VLOOKUP, SUMIF/SUMIFS, INDEX/MATCH, SMALL, and FORECAST.
+Built entirely in Excel workbook: raw and cleaned transaction tables kept side by side for auditability, a `Lookup_Tables` sheet for unit standardization, a `Forecasting_Budgeting` tab (actual revenue, trailing 3-month budget, variance, linear-trend forecast), a `Product_Performance` tab benchmarking all 52 products against their own category peers, an `EDA` tab with four exploratory charts, a stakeholder-facing `Dashboard`, and an `Insights` tab documenting the issue log and findings. Core techniques: SEARCH-based text normalization, TRIM, VLOOKUP, SUMIF/SUMIFS, INDEX/MATCH, SMALL, and FORECAST.
 
 ## Challenges & Solutions
 
