@@ -15,3 +15,7 @@ The standout finding wasn't a business insight — it was catching a broken one 
 ## The Execution
 
 I cleaned the raw data column by column — dates, categories, channels, product IDs, units, prices, quantities, and line totals — documenting each fix in an issue log. On top of the cleaned data, I built a forecast and budget model, then a product-performance flag comparing each product to its own category average (an improvement on my first version, which compared products to their all-time peak and wrongly flagged 42 of 52 as declining). I built four EDA charts and a separate summary Dashboard, adjusting along the way when a chart type didn't render reliably. I closed the process with a full recalculation and cell-by-cell scan across all 12 sheets to confirm zero formula errors before calling it done.
+
+---
+**Author:** Kyla Cathrine Hernandez  
+**Portfolio:** [https://kylahernandez-portfolio.vercel.app/](https://kylahernandez-portfolio.vercel.app/)
