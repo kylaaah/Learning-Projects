@@ -9,7 +9,7 @@ Two questions framed the whole analysis:
 2. **Are there products that need to be replaced? If so, which ones, and why?**
 
 ### The Main Finding
-**On the pandemic:** revenue collapsed from ~₱1.4M/month (January 2020) to ~₱46K/month (June 2020) — a ~97% drop — in just four months. It recovered gradually and returned to roughly pre-pandemic monthly levels by 2022. But the business's **annual** total never recovered to its 2019 peak: ₱14.1M in 2019 versus ₱3.5M in 2026 (complete months only). Nearly every one of the 52 products individually peaked in 2019, which turned out to be the key complication for the second question (see below).
+**On the pandemic:** revenue collapsed from ~₱1M/month (January 2020) to ~₱46K/month (June 2020) — a ~97% drop — in just four months. It recovered gradually and returned to roughly pre-pandemic monthly levels by 2022. But the business's **annual** total never recovered to its 2019 peak: ₱14.1M in 2019 versus ₱3.5M in 2026 (complete months only). Nearly every one of the 52 products individually peaked in 2019, which turned out to be the key complication for the second question (see below).
 
 **On channel behavior**, a pattern worth knowing on its own: Online's share of revenue jumped from 1.6% (2019) to a peak of 29.6% (2021) during pandemic restrictions on in-person shopping, then settled back to ~16–18% post-pandemic — still roughly 10x its pre-pandemic share. Walk-in Store never recovered its former share (27.7% → ~19%). Salon Delivery stayed dominant throughout (60–70% of revenue) and was comparatively resilient during the pandemic itself.
 
